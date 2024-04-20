@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url(https://db.onlinewebfonts.com/c/880dddf972fcd402b08f472d2b94f585?family=GT+Alpina+Typewriter);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6e6d9;
+  font-family: "GT Alpina Typewriter";
+  color: #3c422e;
+  padding-bottom: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  margin: 0 50px;
+  padding-top: 50px;
+}
+
+.side-section {
+  width: 360px;
+  position: sticky;
+  top: 70px;
+  border-top: 1px solid black;
+}
+
+.side-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 5px;
+  border-bottom: 1px solid black;
+}
+
+.side-item p {
+  font-weight: 600;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.circle:hover {
+  background-color: #f6e6d9 !important;
+}
+
+.side-section > p {
+  font-weight: 600;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.main-sec {
+  width: 70%;
+  margin-left: auto;
+}
+
+.main-sec > h1 {
+  font-family: "EB Garamond", serif;
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: -5px;
+  word-spacing: 8px;
+  margin-bottom: 40px;
+}
+
+.green-label {
+  background-color: #9eef80;
+  font-weight: 600;
+  width: fit-content;
+  padding: 8px 28px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.info-container {
+  margin: 20px 0 0 0;
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.info {
+  width: 100%;
+  border-bottom: 1px solid black;
+  position: relative;
+  min-height: 65px;
+}
+
+.info h5 {
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 24px;
+  padding-bottom: 10px;
+  max-width: 80%;
+}
+
+.abs-circle {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+.answer {
+  display: none;
+}
+
+.answer.show {
+  display: block;
+}
+
+.active {
+  background-color: lightgreen;
+}
+
+.info p {
+  font-weight: 600;
+  font-family: "GT Alpina Typewriter", "monospace";
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.heading {
+  margin-top: 80px;
+}
+
+.what-else-section {
+  padding-top: 150px;
+}
+
+.what-else {
+  margin: 0 50px;
+  border-bottom: 1px dashed black;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.what-else p {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.what-else h5 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  border-bottom: 1px dashed black;
+  padding-bottom: 5px;
+}
+
+.follow-us {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.follow-img-container {
+  background-color: lightgreen;
+  width: fit-content;
+  padding: 5px 7px;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.follow-img-container:hover {
+  background-color: #3c422e;
+}
+
+.follow-img-container img {
+  rotate: -45deg;
+  width: 28px;
+  height: 28px;
+  transition: filter 0.5s ease;
+}
+
+.follow-img-container:hover img {
+  filter: invert(100%);
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  margin-top: 20px;
+  white-space: nowrap;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: slide 20s infinite linear;
+}
+
+.logos-slide img {
+  border-radius: 15px;
+  margin: 0 16px;
+  vertical-align: top;
+}
+
+.rounded-20 {
+  border-radius: 20px !important;
+}
+
+.main-sec > p {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .side-section {
+    display: none;
+  }
+  .section {
+    margin: 0 20px;
+  }
+  .main-sec {
+    width: 100%;
+    margin: 0;
+    /* background-color: pink; */
+  }
+
+  .main-sec > h1 {
+    font-size: 45px;
+    letter-spacing: -2.8px;
+    margin-bottom: 15px;
+    text-align: start;
+  }
+  .main-sec > p {
+    display: block;
+    font-weight: 600;
+    line-height: 26px;
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+
+  .what-else {
+    flex-direction: column;
+    border: none;
+    border-top: 1px dashed black;
+  }
+
+  .what-else p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
