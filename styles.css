@@ -113,7 +113,7 @@ a {
   padding-top: 24px;
   cursor: pointer;
   padding-bottom: 10px;
-  max-width: 92%;
+  max-width: 85%;
 }
 
 .abs-circle {
@@ -281,7 +281,7 @@ a {
   }
 
   .info h5 {
-    max-width: 82%;
+    max-width: 80%;
     padding-right: 10px;
   }
 
@@ -290,9 +290,20 @@ a {
   }
 }
 
-@media only screen and (max-width: 326px) {
+@media only screen and (max-width: 400px) {
   .info h5 {
-    max-width: 80%;
-    padding-right: 15px;
+    max-width: 72%;
+    padding-right: 0px;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .info h5 {
+    max-width: 80%;
+  }
+}
+/* @media only screen and (max-width: 1000px) {
+  .info h5 {
+    max-width: 80%;
+  }
+} */
