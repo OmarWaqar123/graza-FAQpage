@@ -6,6 +6,8 @@ const productSection = document.getElementById("product");
 const orderSection = document.getElementById("orders-delivery");
 const subscriptionSection = document.getElementById("subscription");
 
+const blueColor = "#C8E4F4";
+
 // Function to check if an element is in viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -33,11 +35,11 @@ function handleScroll() {
   subscriptionFixedDiv.style.backgroundColor = "white";
 
   if (minDistance === productDistance) {
-    productFixedDiv.style.backgroundColor = "lightgreen";
+    productFixedDiv.style.backgroundColor = blueColor;
   } else if (minDistance === orderDistance) {
-    orderFixedDiv.style.backgroundColor = "lightgreen";
+    orderFixedDiv.style.backgroundColor = blueColor;
   } else {
-    subscriptionFixedDiv.style.backgroundColor = "lightgreen";
+    subscriptionFixedDiv.style.backgroundColor = blueColor;
   }
 }
 

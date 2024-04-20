@@ -5,7 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --blue: #c8e4f4;
+}
 body {
   background-color: #f6e6d9;
   font-family: "GT Alpina Typewriter";
@@ -84,7 +86,7 @@ a {
 }
 
 .green-label {
-  background-color: #9eef80;
+  background-color: var(--blue);
   font-weight: 600;
   width: fit-content;
   padding: 8px 28px;
@@ -128,7 +130,7 @@ a {
 }
 
 .active {
-  background-color: lightgreen;
+  background-color: var(--blue);
 }
 
 .info p {
@@ -178,10 +180,11 @@ a {
   gap: 20px;
 }
 .follow-us h5 {
+  text-decoration: none;
   color: #3c422e;
 }
 .follow-img-container {
-  background-color: lightgreen;
+  background-color: var(--blue);
   width: fit-content;
   padding: 5px 7px;
   border-radius: 10px;
