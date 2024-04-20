@@ -289,3 +289,10 @@ a {
     margin: 0 2px;
   }
 }
+
+@media only screen and (max-width: 326px) {
+  .info h5 {
+    max-width: 80%;
+    padding-right: 15px;
+  }
+}
