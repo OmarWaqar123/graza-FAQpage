@@ -46,27 +46,56 @@ function handleScroll() {
 // Add scroll event listener
 document.addEventListener("scroll", handleScroll);
 
-document.querySelectorAll(".abs-circle").forEach((button) => {
-  button.addEventListener("click", function () {
-    const answer = this.nextElementSibling;
+document.querySelectorAll(".info").forEach((item) => {
+  const question = item.querySelector(".question");
+  const button = item.querySelector(".abs-circle");
+  const answer = item.querySelector(".answer");
 
-    // Check if the clicked button is already showing its associated answer
-    const isAnswerVisible = answer.classList.contains("show");
-
-    // Hide all answers
-    document.querySelectorAll(".answer").forEach((answer) => {
-      answer.classList.remove("show");
+  // Function to toggle answer visibility
+  function toggleAnswer() {
+    // Hide all other answers
+    document.querySelectorAll(".answer.show").forEach((otherAnswer) => {
+      if (otherAnswer !== answer) {
+        otherAnswer.classList.remove("show");
+        otherAnswer.previousElementSibling.classList.remove("active");
+      }
     });
 
-    // Remove the 'active' class from all buttons
-    document.querySelectorAll(".abs-circle").forEach((button) => {
-      button.classList.remove("active");
-    });
+    // Toggle visibility of the current answer
+    answer.classList.toggle("show");
 
-    // If the clicked button is not already showing its associated answer, show it
-    if (!isAnswerVisible) {
-      answer.classList.add("show");
-      this.classList.add("active"); // Add 'active' class to the clicked button
-    }
-  });
+    // Toggle active class for button
+    button.classList.toggle("active", answer.classList.contains("show"));
+  }
+
+  // Click event listener for question
+  question.addEventListener("click", toggleAnswer);
+
+  // Click event listener for toggle button
+  button.addEventListener("click", toggleAnswer);
 });
+
+// document.querySelectorAll(".abs-circle").forEach((button) => {
+//   button.addEventListener("click", function () {
+//     const answer = this.nextElementSibling;
+
+//     // Check if the clicked button is already showing its associated answer
+//     const isAnswerVisible = answer.classList.contains("show");
+
+//     // Hide all answers
+//     document.querySelectorAll(".answer").forEach((answer) => {
+//       answer.classList.remove("show");
+//     });
+
+//     // Remove the 'active' class from all buttons
+//     document.querySelectorAll(".abs-circle").forEach((button) => {
+//       button.classList.remove("active");
+//     });
+
+//     // If the clicked button is not already showing its associated answer, show it
+//     if (!isAnswerVisible) {
+//       answer.classList.add("show");
+//       this.classList.add("active"); // Add 'active' class to the clicked button
+//     }
+//   });
+// });

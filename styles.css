@@ -111,8 +111,9 @@ a {
   font-weight: 600;
   font-size: 16px;
   padding-top: 24px;
+  cursor: pointer;
   padding-bottom: 10px;
-  max-width: 80%;
+  max-width: 92%;
 }
 
 .abs-circle {
@@ -227,7 +228,7 @@ a {
 }
 
 .logos-slide img {
-  border-radius: 15px;
+  border-radius: 18px;
   margin: 0 16px;
   vertical-align: top;
 }
@@ -277,5 +278,13 @@ a {
     text-align: center;
     font-size: 16px;
     margin-bottom: 40px;
+  }
+
+  .info h5 {
+    max-width: 82%;
+  }
+
+  .logos-slide img {
+    margin: 0 8px;
   }
 }
