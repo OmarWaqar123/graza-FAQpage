@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 .section {
   display: flex;
   align-items: flex-start;
@@ -171,7 +175,9 @@ html {
   align-items: center;
   gap: 20px;
 }
-
+.follow-us h5 {
+  color: #3c422e;
+}
 .follow-img-container {
   background-color: lightgreen;
   width: fit-content;
